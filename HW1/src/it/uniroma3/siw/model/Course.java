@@ -34,7 +34,7 @@ public class Course {
 	
 	/* Essendo una ManyToOne e' meglio che vengano caricati subito gli oggetti collegati (lo e' gia' di default) */
 	
-	@ManyToOne  (fetch = FetchType.EAGER) //pi� corsi sono tenuti dallo stesso docente  (Bi)
+	@ManyToOne  (fetch = FetchType.EAGER) //piu' corsi sono tenuti dallo stesso docente  (Bi)
 	private Teacher teacher;
 	
 	

@@ -11,7 +11,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Student {
@@ -34,11 +34,11 @@ public class Student {
 	
 	private String email;
 	
-	/* Qui probabilmente sarebbe opportuno inserire una politica di tipo "cascade persist" e una politica di tipo "cascade remove" in quanto 
-	   se inseriamo un nuovo studente con la relativa azienda sarebbe meglio che anche la tabella deglle ziende venga aggiornata con l'azienda stessa, 
-	   stessa cosa se eliminiamo uno studente; inoltre essendo una OneToOne e' meglio che vengano caricati subito gli oggetti collegati (lo e' gia' di default) */
+	/* Qui probabilmente sarebbe opportuno inserire una politica di tipo "cascade persist" in quanto 
+	   se inseriamo un nuovo studente con la relativa azienda sarebbe meglio che anche la tabella delle aziende venga aggiornata con l'azienda stessa; 
+	   inoltre essendo una ManyToOne e' meglio che vengano caricati subito gli oggetti collegati (lo e' gia' di default) */
 	
-	@OneToOne (fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.REMOVE})    //uno studente e' dipendente di una e una sola societa'  (Mono)
+	@ManyToOne (fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)    //uno studente e' dipendente di una e una sola societa', ma più studenti possono far parte di una stessa azienda  (Mono)
 	private Company company;
 	
 	/* Essendo una ManyToMany e' meglio che gli oggetti collegati vengano caricati quando richiesti (lo e' gia' di default) */
