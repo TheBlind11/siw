@@ -37,6 +37,10 @@ public class Course {
 	@ManyToOne  (fetch = FetchType.EAGER) //piu' corsi sono tenuti dallo stesso docente  (Bi)
 	private Teacher teacher;
 	
+	public Course(String name, LocalDate startDate) {
+		this.name = name;
+		this.startDate = startDate;
+	}
 	
 	public String getName() {
 		return name;
@@ -70,5 +74,8 @@ public class Course {
 		this.students = students;
 	}
 	
+	public void setTeacher(Teacher teacher) {
+		this.teacher = teacher;
+	}
 	
 }

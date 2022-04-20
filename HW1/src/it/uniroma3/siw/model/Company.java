@@ -27,6 +27,10 @@ public class Company {
 	private Address address;
 	
 	private String phoneNumber;
+	
+	public Company(String name) {
+		this.name = name;
+	}
 
 	public String getName() {
 		return name;

@@ -46,6 +46,11 @@ public class Student {
 	@ManyToMany  (fetch = FetchType.LAZY) //piu' studenti sono iscritti a piu' corsi e piu' corsi sono seguiti da piu' studenti  (Bi)
 	private List<Course> courses;
 
+	public Student(String name, String serialNumber) {
+		this.name = name;
+		this.serialNumber = serialNumber;
+	}
+	
 	public String getName() {
 		return name;
 	}

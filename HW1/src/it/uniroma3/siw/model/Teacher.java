@@ -34,6 +34,11 @@ public class Teacher {
 	
 	@OneToMany(mappedBy = "teacher" , fetch = FetchType.LAZY)  //un docente puo' tenere piu' corsi  (Bi)
 	private List<Course> courses;
+	
+	public Teacher(String name, String VATNumber) {
+		this.name = name;
+		this.VATNumber = VATNumber;
+	}
 
 	public String getName() {
 		return name;
