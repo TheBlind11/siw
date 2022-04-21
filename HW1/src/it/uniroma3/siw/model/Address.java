@@ -17,7 +17,7 @@ public class Address {
 	private String street;
 	
 	@Column(nullable = false)
-	private int streetNumber;
+	private String streetNumber;
 	
 	@Column(nullable = false)
 	private String city;
@@ -35,11 +35,11 @@ public class Address {
 		this.street = street;
 	}
 
-	public int getStreetNumber() {
+	public String getStreetNumber() {
 		return streetNumber;
 	}
 
-	public void setStreetNumber(int streetNumber) {
+	public void setStreetNumber(String streetNumber) {
 		this.streetNumber = streetNumber;
 	}
 
