@@ -51,7 +51,7 @@ img {
 	padding: 2% 4%;
 }
 
-#research-content, #didattica-content, #attività-content {
+#flex-container-dx, #research-content, #didattica-content, #attività-content {
 	background-color: aliceblue;
 	padding: 20px;  /* spazio interno */
 	box-shadow: 0 0 6px #111; /* ombra intorno al box */
