@@ -26,8 +26,6 @@ img {
 }
   
 #flex-container-dx, #research-content, #didattica-content, #attività-content {
-	display: flex;
-	flex-direction: column;
 	font-size: 1.2em;
 }
   
