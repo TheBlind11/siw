@@ -4,78 +4,74 @@ h1, h2 {
 }
 
 .sottotitolo {
-	font-size: large;
-	font-weight: bold;
-	text-align: center;
+	font-size: large; /* grandezza font */
+	font-weight: bold;  /* spessore font */
+	text-align: center; /* allinea testo */
 	margin-bottom: 20px;
 }
   
 img {
 	width: 20em;
-	width: 20em;
 }
   
 #informazioni {
-	display: flex;
-	justify-content: center;
+	display: flex; /* contenitore (ridimensiona tutto al suo interno) */
+	justify-content: center; /* stessa cosa di text align per i contenitori */
 	align-items: center;
-	height: auto;
+	padding: 2% 4%;
 }
   
 #flex-container-sx {
 	margin-right: 2em;
 }
   
-#flex-container-dx {
+#flex-container-dx, #research-content, #didattica-content, #attività-content {
 	display: flex;
 	flex-direction: column;
+	font-size: 1.2em;
 }
   
-#flex-container-dx a, #research-content a {
+#flex-container-dx a, #research-content a, #didattica a, #attività a{
 	text-decoration: none;
 	font-size: 1.2em;
 }
   
 /* hover = cursore sopra */
-#flex-container-dx a:hover, #research a:hover {
+#flex-container-dx a:hover, #research a:hover, #didattica a:hover, #attività a:hover {
 	background-color: beige;
 }
   
 /* visited = colore link se già visitato */
-#flex-container-dx a:visited, #research a:visited {
+#flex-container-dx a:visited, #research a:visited, #didattica a:visited, #attività a:visited {
 	color: #1975D1;
 }
 
 /* sotto al div "informazioni" */
 #research {
-	display: flex;
-	justify-content: space-around;
 	justify-content: center;
 	align-items: center;
-	height: auto;
+	padding: 2% 4%;
 }
 
-#research-content {
-	display: flex;
-	flex-direction: column;
+#research-content, #didattica-content, #attività-content {
+	background-color: aliceblue;
+	padding: 20px;  /* spazio interno */
+	box-shadow: 0 0 6px #111; /* ombra intorno al box */
 }
 
 /* caratteristiche elementi lista del div in questione */
-#research-content ul li, .didattica-content ul li { 
+#research-content ul li, #didattica-content ul li, #attività-content ul li { 
 	margin: 0 20px 20px 0; 
 }
 
-#didattica {
-	height: auto;
-}
-
-#didattica-content {
-	margin-bottom: 3em;
+#didattica, #attività {
+	padding: 2% 4%; /* spazio interno */
 }
 
 body {
 	background-color: rgba(181, 250, 182, 0.668);
 	font-family: Helvetica;
 }
+
 
 
