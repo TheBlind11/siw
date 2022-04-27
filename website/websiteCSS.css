@@ -1,0 +1,69 @@
+h1, p, h2 {
+	text-align: center;
+}
+  
+body {
+	font-family: Helvetica;
+}
+  
+img {
+	width: 20em;
+	width: 20em;
+}
+  
+#informazioni {
+	display: flex;
+	justify-content: space-around;
+	justify-content: center;
+	align-items: center;
+	height: 350px;
+}
+  
+#flex-container-sx {
+	margin-right: 2em;
+}
+  
+#flex-container-dx {
+	display: flex;
+	flex-direction: column;
+}
+  
+#flex-container-dx a, #research-content a {
+	text-decoration: none;
+	font-size: 1.2em;
+	display: table;
+}
+  
+/* hover = cursore sopra */
+#flex-container-dx a:hover, #research a:hover {
+	background-color: beige;
+}
+  
+/* visited = colore link se già visitato */
+#flex-container-dx a:visited, #research a:visited {
+	color: #1975D1;
+}
+  
+.scritte {
+	display: block;
+}
+
+/* sotto al div "informazioni" */
+#research {
+	display: flex;
+	justify-content: space-around;
+	justify-content: center;
+	align-items: center;
+	height: 350px;
+}
+
+#research-content {
+	display: flex;
+	flex-direction: column;
+}
+
+#research-content ul li { 
+	margin: 0 20px 20px 0; 
+	vertical-align: top;
+}
+
