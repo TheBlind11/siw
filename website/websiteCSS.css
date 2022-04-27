@@ -1,10 +1,13 @@
-h1, p, h2, p2, p3, p4, p5, p6, p7, p8 {
+h1, h2 {
 	text-align: center;
 	margin-bottom: 20px;
 }
-  
-body {
-	font-family: Helvetica;
+
+.sottotitolo {
+	font-size: large;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 20px;
 }
   
 img {
@@ -14,10 +17,9 @@ img {
   
 #informazioni {
 	display: flex;
-	justify-content: space-around;
 	justify-content: center;
 	align-items: center;
-	height: 350px;
+	height: auto;
 }
   
 #flex-container-sx {
@@ -32,7 +34,6 @@ img {
 #flex-container-dx a, #research-content a {
 	text-decoration: none;
 	font-size: 1.2em;
-	display: table;
 }
   
 /* hover = cursore sopra */
@@ -44,10 +45,6 @@ img {
 #flex-container-dx a:visited, #research a:visited {
 	color: #1975D1;
 }
-  
-.scritte {
-	display: block;
-}
 
 /* sotto al div "informazioni" */
 #research {
@@ -55,7 +52,7 @@ img {
 	justify-content: space-around;
 	justify-content: center;
 	align-items: center;
-	height: 1500px;
+	height: auto;
 }
 
 #research-content {
@@ -64,13 +61,21 @@ img {
 }
 
 /* caratteristiche elementi lista del div in questione */
-#research-content ul li { 
+#research-content ul li, .didattica-content ul li { 
 	margin: 0 20px 20px 0; 
-	vertical-align: top;
 }
 
-#research-content ul {
-	justify-content: center;
+#didattica {
+	height: auto;
+}
+
+#didattica-content {
+	margin-bottom: 3em;
+}
+
+body {
+	background-color: rgba(181, 250, 182, 0.668);
+	font-family: Helvetica;
 }
 
 
