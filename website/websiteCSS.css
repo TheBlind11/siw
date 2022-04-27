@@ -1,5 +1,6 @@
-h1, p, h2 {
+h1, p, h2, p2, p3, p4, p5, p6, p7, p8 {
 	text-align: center;
+	margin-bottom: 20px;
 }
   
 body {
@@ -54,7 +55,7 @@ img {
 	justify-content: space-around;
 	justify-content: center;
 	align-items: center;
-	height: 350px;
+	height: 1500px;
 }
 
 #research-content {
@@ -62,8 +63,14 @@ img {
 	flex-direction: column;
 }
 
+/* caratteristiche elementi lista del div in questione */
 #research-content ul li { 
 	margin: 0 20px 20px 0; 
 	vertical-align: top;
 }
+
+#research-content ul {
+	justify-content: center;
+}
+
 
