@@ -5,11 +5,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>it.uniroma3.siw</groupId>
-  <artifactId>siw-servlet-es0</artifactId>
+  <artifactId>siw-servlet-es0-copy</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <name>siw-servlet-es0 Maven Webapp</name>
+  <name>siw-servlet-es0-copy Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -40,7 +40,7 @@
   </dependencies>
 
   <build>
-    <finalName>siw-servlet-es0</finalName>
+    <finalName>siw-servlet-es0-copy</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <plugin>
