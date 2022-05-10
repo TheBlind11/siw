@@ -6,8 +6,8 @@
 </head>
 <body>
 	<h1>Dati inseriti:</h1>
-	<div>Nome: ${nomeSessione}</div>
-	<div>Cognome: ${cognomeSessione}</div>
+	<div>Nome: ${persona.nome}</div>
+	<div>Cognome: ${persona.cognome}</div>
 </body>
 </html>
 

@@ -28,8 +28,8 @@ public class ConfermaController extends HttpServlet{
 
 		// c'è qualcosa che non va?
 
-		if (hs.getAttribute("nomeSessione") != null) {
-			
+		if (request.getParameter("submit") != null) {
+			ps.save((Persona)hs.getAttribute("persona"));
 			nextPage = "/persona.jsp";
 		}
 		else

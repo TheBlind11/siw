@@ -12,10 +12,8 @@
 		<div>
 			<input type="submit" name="submit" value="conferma" />
 		</div>
-	</form>
-	<form action="index" method="post">
 		<div>
-			<input type="submit" name="submit" value="torna indietro" />
+			<input type="submit" name="back" value="torna indietro" />
 		</div>
 	</form>
 </body>

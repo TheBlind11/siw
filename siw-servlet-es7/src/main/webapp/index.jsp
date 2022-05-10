@@ -7,11 +7,11 @@
 <body>
 	<form action="index" method="post">
 		<div>
-			Nome: <input type="text" name="nome" value="${nome}" />
+			Nome: <input type="text" name="nome" value="${persona.nome}" />
 		</div>
 		<div>${messaggioErroreNome}</div>
 		<div>
-			Cognome: <input type="text" name="cognome" value="${cognome}" />
+			Cognome: <input type="text" name="cognome" value="${persona.cognome}" />
 		</div>
 		<div>${messaggioErroreCognome}</div>
 		<div>

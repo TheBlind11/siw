@@ -37,12 +37,11 @@ public class IndexController extends HttpServlet {
 		Persona p = new Persona();
 		p.setNome(nome);
 		p.setCognome(cognome);
+		hs.setAttribute("persona", p);
 		
 		// c'è qualcosa che non va?
 		
 		if (pv.valid(request)) {
-			hs.setAttribute("nomeSessione", request.getAttribute("nome"));
-			hs.setAttribute("cognomeSessione", request.getAttribute("cognome"));
 			nextPage = "/conferma.jsp";
 		}
 		else
