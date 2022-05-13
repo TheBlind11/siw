@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>From</title>
+</head>
+<body>
+	<form th:action="@{/persona}" method="post" th:object="${persona}">
+		<div>
+			Nome:<input type="text" th:field="*{nome}" />
+		</div>
+		<div>
+			Cognome:<input type="text" th:field="*{cognome}" />
+		</div>
+		<div>
+			Età:<input type="number" th:field="*{eta}" />
+		</div>
+		<div>
+			<button type="submit">Conferma</button>
+		</div>
+	</form>
+</body>
+</html>
