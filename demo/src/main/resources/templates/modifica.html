@@ -2,28 +2,40 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>From</title>
+<!-- <link href="/css/my-style.css" rel="stylesheet"> --->
+<title>Modifica</title>
 </head>
 <body>
-	<form th:action="@{/persona}" method="post" th:object="${persona}">
+	<form th:action="@{/modifica}" method="get" th:object="${persona}">
 		<div th:if="${#fields.hasGlobalErrors()}">
 			<p th:each="err : ${#fields.globalErrors()}" th:text="${err}">...</p>
 		</div>
+
 		<div>
-			Nome:<input type="text" th:field="*{nome}" />
+			Id:<input readonly="readonly" type="text" value="${p.id}"/>
+		</div>
+
+		<div>
+			Nome:<input type="text" value="${p.nome}"/>
 			<span th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></span>
 		</div>
+
 		<div>
-			Cognome:<input type="text" th:field="*{cognome}" />
+			Cognome:<input type="text" value="${p.cognome}"/> 
 			<span th:if="${#fields.hasErrors('cognome')}" th:errors="*{cognome}"></span>
 		</div>
+
 		<div>
-			Età:<input type="number" th:field="*{eta}" />
+			Età:<input type="number" value="${p.eta}"/> 
 			<span th:if="${#fields.hasErrors('eta')}" th:errors="*{eta}"></span>
 		</div>
+		
 		<div>
 			<button type="submit">Conferma</button>
 		</div>
 	</form>
+	<footer>
+		<a href="/">Home</a>
+	</footer>
 </body>
 </html>

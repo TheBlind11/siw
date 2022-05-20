@@ -7,6 +7,7 @@ import javax.persistence.Id;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class Persona {
@@ -21,6 +22,7 @@ public class Persona {
 	@NotBlank
 	private String cognome;
 	
+	@NotNull
 	@Min(0)
 	@Max(120)
 	private Integer eta;
@@ -49,7 +51,9 @@ public class Persona {
 		this.eta = eta;
 	}
 	
-	
+	public Long getId() {
+		return Id;
+	}
 	
 	
 }

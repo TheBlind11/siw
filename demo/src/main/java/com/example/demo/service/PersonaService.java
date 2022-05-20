@@ -36,4 +36,13 @@ public class PersonaService {
 		return persone;
 	}
 	
+	public boolean alreadyExists(Persona p) {
+		return this.pr.existsByNomeAndCognomeAndEta(p.getNome(), p.getCognome(), p.getEta());
+		
+	}
+	
+	public void delete(Long id) {
+		pr.deleteById(id);
+	}
+	
 }

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<!-- <link href="/css/my-style.css" rel="stylesheet"> --->
+<title>Persone</title>
+</head>
+<body>
+	<div>
+		<h4>Persone inserite</h4>
+		
+		<ul>
+			<li th:each="persona : ${persone}">
+			<a href="persona.html" th:href="@{'/persona' + '/' + ${persona.id}}" th:text="${persona.nome} + ' ' + ${persona.cognome}">Paolo Rossi</a>
+			<a href="modifica.html" th:href="@{'/modifica' + '/' + ${persona.id}}">Modifica</a>
+			<a href="persone.html" th:href="@{'/delete' + '/' + ${persona.id}}">Cancella</a></li>
+		</ul>
+
+	</div>
+	<footer>
+		<a href="/">Home</a>
+	</footer>
+</body>
+</html>

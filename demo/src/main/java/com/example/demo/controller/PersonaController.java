@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import com.example.demo.controller.validator.PersonaValidator;
 import com.example.demo.model.Persona;
 import com.example.demo.service.PersonaService;
 
@@ -21,6 +22,9 @@ public class PersonaController {
 	
 	@Autowired
 	private PersonaService ps;
+	
+	@Autowired
+	private PersonaValidator pv;
 	
 	//usare metodi get per operazioni di lettura
 	//usare metodi post per operazioni di scrittura
@@ -31,6 +35,8 @@ public class PersonaController {
 	@PostMapping("/persona")
 	public String addPersona(@Valid @ModelAttribute("persona") Persona persona, BindingResult bindingResult, Model model) {
 		
+		this.pv.validate(persona, bindingResult);
+
 		if(!bindingResult.hasErrors()) {
 			ps.save(persona);
 			model.addAttribute("persona", persona);
@@ -43,7 +49,7 @@ public class PersonaController {
 	}
 	
 	//richiede tutte le persone
-	@GetMapping("/persona")
+	@GetMapping("/persone")
 	public String getPersone(Model model) {
 		List<Persona> persone = ps.findAll();
 		model.addAttribute("persone", persone);
@@ -57,10 +63,32 @@ public class PersonaController {
 		return "persona.html";
 	}
 	
+	@GetMapping("/modifica/{id}")
+	public String getPersonaAndModifica(@PathVariable("id") Long id, @Valid @ModelAttribute("persona") Persona persona, BindingResult bindingResult, Model model) {
+		
+		Persona p = ps.findById(id);
+		model.addAttribute("persona", p);
+		
+		this.pv.validate(persona, bindingResult);
+
+		if(!bindingResult.hasErrors()) {
+			ps.save(persona);
+			model.addAttribute("persona", persona);
+			return "persona.html";
+		}
+		
+		else return "modifica.html";
+	}
+	
 	@GetMapping("/personaForm")
 	public String getPersona(Model model) {
 		model.addAttribute("persona", new Persona());
 		return "personaForm.html";
 	}
 	
+	@GetMapping("/delete/{id}")
+	public String deletePersona(@PathVariable("id") Long id, Model model) {
+		ps.delete(id);
+		return "persone.html";
+	}
 }
