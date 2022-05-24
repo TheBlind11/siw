@@ -20,6 +20,7 @@ public class PersonaValidator implements Validator {
 			errors.reject("persona.duplicato");
 		}
 	}
+	
 	@Override
 	public boolean supports(Class<?> aClass) {
 		return Persona.class.equals(aClass);
